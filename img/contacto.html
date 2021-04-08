@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bienes Raices - Anuncios</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="contenedor contenidor-header">	
+			<div class="barra">
+				<a href="/">
+					<img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+				</a>
+				<nav class="navegacion">		
+					<a href="nosotros.html">Nosotros</a>
+					<a href="anuncios.html">Anuncios</a>  
+					<a href="blog.html">Blog</a>
+					<a href="contacto.html">Contacto</a>
+				</nav>
+			</div>
+		</div> <!-- contenedor -->
+	</header>
+
+	<h1 class="centrar-texto fw-300">Contacto</h1>
+
+	<img class="img" src="img/destacada3.jpg" alt="Foto anunco destacado">
+
+	<main class="contenedor seccion contenido-centrado">
+		
+		<h2 class="fw-300 centrar-texto">Llena el formulario de contacto</h2>
+
+		<form>
+			<fieldset>
+				<legend>Información personal</legend>
+				<label for="nombre">Nombre:</label> <!-- A label, junto com o id do input faz com que o navegador entenda que o nome e o campo estao atrelados.-->
+				<input type="text" id="nombre" placeholder="Tu nombre" value=""> <!-- pesquisar melhro a funcao do value-->
+
+				<label for="email">Email</label>
+				<input type="email" id="email" placeholder="Tu correo eletrónico" required="">
+
+				<label for="telefono">Telefono</label>
+				<input type="tel" id="telefono" placeholder="Tu telefono" required="">
+
+				<label for="mensaje">Mensaje:</label>
+				<textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+			</fieldset>
+
+			<fieldset>
+				<legend>Información sobre Propriedad</legend>
+				<label for="opciones">Vende o Compra</label>
+				<select id="opciones">
+					<option disabled selected="">-- Selecione --</option> <!-- Estas propriedes permitem desabilitam a selecao desse conteudo e permite que ele seja o primeiro a ser visto.  -->
+					<option value="Compra">Compra</option>
+					<option value="Vende">Venda</option>
+				</select>
+
+				<label for="cantidad">Cantidad:</label>
+				<input type="number" min="0" max="100" step="5">
+			</fieldset>
+
+			<fieldset>
+				<legend>Contact</legend>
+				
+				<p class="contacto">Como deseas ser contactado:</p>
+
+				<div class="forma-contacto">
+					<label for="telefono">Teléfono</label>
+					<input type="radio" id="telefono" name="contacto" value="telefono"> <!-- Para fazer com que apenas uma das opcoes seja escolhida é preciso dar-lhes o mesmo "name"  -->
+					<label for="correo">Email</label>
+					<input type="radio" id="correo" name="contacto" value="correo">
+				</div>
+
+				<p class="contacto">Si eligió teléfono, elija la fecha y la hora:</p>
+				<label for="fecha">Fecha:</label>
+				<input type="date" id="fecha">
+
+				<label for="hora">Hora</label>
+				<input type="time" id="hora" min="09:00" max="18:00">
+			</fieldset>
+			<input type="submit" value="Enviar" class="boton boton-verde">
+		</form>
+		
+
+	</main>
+
+	<footer class="site-footer seccion">
+		<div class="contenedor contenedor-footer">
+			<nav class="navegacion">
+				<a href="nosotros.html">Nosotros</a>
+				<a href="anuncios.html">Anuncios</a>  
+				<a href="blog.html">Blog</a>
+				<a href="contacto.html">Contacto</a>
+			</nav>
+			<p class="copyright">Todos los derechos reservados &copy; 2020</p>
+		</div>
+	</footer>
+
+</body>
+</html>
